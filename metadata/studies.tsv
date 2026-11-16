@@ -1,0 +1,105 @@
+bioproject	cohort_id	include	tax_id	source	location	region_16S	n_reported	sample_type	age_status	notes
+PRJNA1162741	TRIAD_ES	Y		VERIFIED	Spain	V3-V4	471.0	Saliva	exact age deposited	Case-control study: keep controls only via rules.tsv. 470 adults
+PRJNA667146	SLL2_ES	Y		VERIFIED	Spain		1648.0	Oral rinse	exact age deposited	Willis 2022. 447 adults after curation. Recover chronic-disorder flags from authors' repo
+CRA006476	CHINA_06476	N		MICROAGE2025	China			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. CRA = China NGDC/GSA accession, NOT in ENA/SRA: download separately from ngdc.cncb.ac.cn; the harvester cannot fetch it
+PRJDB10651	JAPAN_10651	Y		MICROAGE2025	Japan			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJDB10985	JAPAN_10985	Y		MICROAGE2025	Japan			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJDB11746	JAPAN_11746	Y		MICROAGE2025	Japan			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJDB12092	JAPAN_12092	Y		MICROAGE2025	Japan			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJDB17623	JAPAN_17623	Y		MICROAGE2025	Japan			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJDB5650	JAPAN_B5650	Y		MICROAGE2025	Japan			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJEB22266	BELGIUM_22266	Y		MICROAGE2025	Belgium			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJEB27304	USA_27304	Y		MICROAGE2025	USA			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJEB29169	USA_29169	Y		MICROAGE2025	USA			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJEB2961	USA_B2961	Y		MICROAGE2025	USA			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJEB29934	USA_29934	Y		MICROAGE2025	USA			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJEB37501	TAIWAN_37501	Y		MICROAGE2025	Taiwan			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJEB38062	ISRAEL_38062	Y		MICROAGE2025	Israel			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJEB39064	TAIWAN_39064	Y		MICROAGE2025	Taiwan			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJEB46654	NETHERLAN_46654	Y		MICROAGE2025	The Netherlands			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJEB48040	USA_48040	Y		MICROAGE2025	USA			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJEB51261	USA_51261	Y		MICROAGE2025	USA			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJNA1013236	SOUTHKORE_13236	Y		MICROAGE2025	South Korea			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJNA1077481	AUSTRALIA_77481	Y		MICROAGE2025	Australia			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJNA1090251	EGYPT_90251	Y		MICROAGE2025	Egypt			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJNA1156306	CHINA_56306	Y		MICROAGE2025	China			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJNA285477	THAILAND_85477	Y		MICROAGE2025	Thailand			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJNA330897	USA_30897	Y		MICROAGE2025	USA			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJNA419274	ANTARCTIC_19274	Y		MICROAGE2025	Antarctic			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Antarctic expedition cohort: likely longitudinal and a special environment, check repeat sampling and whether it belongs in a healthy reference
+PRJNA525734	JAPAN_25734	Y		MICROAGE2025	Japan			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJNA613586	TURKEY_13586	Y		MICROAGE2025	Turkey			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJNA643872	CHINA_43872	Y		MICROAGE2025	China			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJNA647054	CHINA_47054	Y		MICROAGE2025	China			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJNA648248	CHINA_48248	Y		MICROAGE2025	China			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJNA648473	CHINA_48473	N		MICROAGE2025	China			Saliva (per MicroAge)	not yet screened	Excluded 24 Sep: TSH study, region unresolved and case-control design
+PRJNA650552	USA_50552	Y		MICROAGE2025	USA			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJNA674379	USA_74379	Y		MICROAGE2025	USA	V1-V3		Saliva (per MicroAge)	not yet screened	Region V1-V3. GERD / proton pump inhibitor study, same UIC lab as USA_39492 - not an independent fold, consider pooling. Case-control: keep controls only.
+PRJNA739492	USA_39492	Y		MICROAGE2025	USA	V1-V3		Saliva (per MicroAge)	not yet screened	Region V1-V3. Schwartz et al. BMC Oral Health 2021, doi 10.1186/s12903-021-01828-1. Saliva microbiome and aging, UIC urban clinic; periodontal status, edentulism, medication, tobacco recorded.
+PRJNA747639	AUSTRALIA_47639	Y		MICROAGE2025	Australia			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJNA750902	ITALY_50902	Y		MICROAGE2025	Italy			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJNA753008	ITALY_53008	Y		MICROAGE2025	Italy			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJNA774247	PORTUGAL_74247	Y		MICROAGE2025	Portugal			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJNA774796	SPAIN_74796	Y		MICROAGE2025	Spain			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJNA774981	SPAIN_POR_74981	Y		MICROAGE2025	Spain+Portugal			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJNA801237	CANADA_01237	Y		MICROAGE2025	Canada			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJNA804331	SOUTHKORE_04331	Y		MICROAGE2025	South Korea			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJNA836346	INDIA_36346	Y		MICROAGE2025	India			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJNA841273	CHINA_41273	Y		MICROAGE2025	China			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJNA867125	GERMANY_S_67125	Y		MICROAGE2025	Germany+Slovenia			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJNA896341	MEXICO_96341	N		MICROAGE2025	Mexico			Saliva (per MicroAge)	not yet screened	Excluded 24 Sep: COVID-19 case-control, region unresolved
+PRJNA908123	CHINA_08123	N		MICROAGE2025	China	V4-V5		Saliva (per MicroAge)	not yet screened	Region V4-V5 (515F/907R, per BioProject record). WARNING: samples are 24-hour saliva BIOFILMS grown in vitro, not donor saliva - all donors 23-24 y and female. Candidate for exclusion.
+PRJNA911189	SPAIN_11189	Y		MICROAGE2025	Spain			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJNA912320	USA_12320	Y		MICROAGE2025	USA			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJNA983278	SPAIN_83278	Y		MICROAGE2025	Spain			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJNA997934	NETHERLAN_97934	Y		MICROAGE2025	The Netherlands			Saliva (per MicroAge)	not yet screened	Saliva MicroAge dataset. Saliva by MicroAge's selection; age, sample type and health screened at harvest
+PRJEB25916	CENT_IT	N		MICROAGE2025	Italy		0.0	Mixed body sites	no age in repository	Centenarians. Neither age nor body site deposited. Needs author key
+PRJEB11529	HALL17_CA	Y		RUAN2022	Canada	V3-V4	95.0	Stimulated	not yet screened	Hall 2017. Ruan 2022 study; 95 samples reported. Screen age at harvest
+PRJEB21767	LUNDMARK19_EU	Y		RUAN2022	Europe	V3-V4	47.0	Stimulated	not yet screened	Lundmark 2019. Ruan 2022 study; 47 samples reported. Screen age at harvest
+PRJEB37299	KUMPITSCH20_EU	Y		RUAN2022	Europe	V4	11.0	Stimulated	not yet screened	Kumpitsch 2020. Ruan 2022 study; 11 samples reported. Screen age at harvest. Small cohort (<30): pool with same-region studies for leave-one-cohort-out
+PRJEB37445	DEBELIUS20_CN	Y		RUAN2022	China	V3-V4	436.0	Stimulated	not yet screened	Debelius 2020. Ruan 2022 study; 436 samples reported. Screen age at harvest
+PRJEB9010	CAMERON15_EU	Y		RUAN2022	Europe	V3-V4	61.0	Stimulated	not yet screened	Cameron 2015. Ruan 2022 study; 61 samples reported. Screen age at harvest
+PRJNA292800	OZGA16_US	Y		RUAN2022	United States	V4	18.0	Unstimulated	not yet screened	Ozga 2016. Ruan 2022 study; 18 samples reported. Screen age at harvest. Small cohort (<30): pool with same-region studies for leave-one-cohort-out
+PRJNA306560	WANG16_CN	Y		RUAN2022	China	V4	18.0	Stimulated	not yet screened	Wang 2016. Ruan 2022 study; 18 samples reported. Screen age at harvest. Small cohort (<30): pool with same-region studies for leave-one-cohort-out
+PRJNA321349	TIAN17_US	Y		RUAN2022	United States	V3-V4	20.0	Stimulated	not yet screened	Tian 2017. Ruan 2022 study; 20 samples reported. Screen age at harvest. Small cohort (<30): pool with same-region studies for leave-one-cohort-out
+PRJNA321534	CHEN18_US	Y		RUAN2022	United States	V4	18.0	Unstimulated	not yet screened	Chen 2018. Ruan 2022 study; 18 samples reported. Screen age at harvest. Small cohort (<30): pool with same-region studies for leave-one-cohort-out
+PRJNA323410	ACHARYA17_IN	Y		RUAN2022	India	V3-V4	49.0	Unstimulated	not yet screened	Acharya 2017. Ruan 2022 study; 49 samples reported. Screen age at harvest
+PRJNA326866	LINDHEIM16_EU	Y		RUAN2022	Europe	V1-V2	20.0	Unstimulated	not yet screened	Lindheim 2016. Ruan 2022 study; 20 samples reported. Screen age at harvest. Small cohort (<30): pool with same-region studies for leave-one-cohort-out
+PRJNA356414	RUSSO18_EU	Y		RUAN2022	Europe	V3-V4	10.0	Unstimulated	not yet screened	Russo 2018. Ruan 2022 study; 10 samples reported. Screen age at harvest. Small cohort (<30): pool with same-region studies for leave-one-cohort-out
+PRJNA361501	COLLADO18_EU	N		RUAN2022	Europe	V3-V4	98.0	Other	no usable age	Collado 2018. host age='washout' - dietary intervention design, not a chronological age
+PRJNA380250	CABRAL17_US	Y		RUAN2022	United States	V1-V2/V4-V5	8.0	Unstimulated	not yet screened	Cabral 2017. Ruan 2022 study; 8 samples reported. Screen age at harvest. Small cohort (<30): pool with same-region studies for leave-one-cohort-out
+PRJNA386665	LEE17_CN	Y		RUAN2022	China	V4	127.0	Unstimulated	exact age deposited	Lee 2017. host age=57 exact; host disease flags healthy controls; geographic location=Taiwan (Ruan lists China)
+PRJNA413706	STEWART18_US	Y		RUAN2022	United States	V4	30.0	Stimulated	not yet screened	Stewart 2018. Ruan 2022 study; 30 samples reported. Screen age at harvest
+PRJNA414355	WANG18_CN	Y		RUAN2022	China	V3-V4	36.0	Unstimulated	not yet screened	Wang 2018. Ruan 2022 study; 36 samples reported. Screen age at harvest
+PRJNA414682	XUN18_CN	Y		RUAN2022	China	V3-V4	20.0	Unstimulated	not yet screened	Xun 2018. Ruan 2022 study; 20 samples reported. Screen age at harvest. Small cohort (<30): pool with same-region studies for leave-one-cohort-out
+PRJNA421234	VESTY18_NZ	Y		RUAN2022	New Zealand	V3-V4	6.0	Unstimulated	not yet screened	Vesty 2018. Ruan 2022 study; 6 samples reported. Screen age at harvest. Small cohort (<30): pool with same-region studies for leave-one-cohort-out
+PRJNA421776	UNNAMED23_US	N		RUAN2022	United States	V3-V4	85.0	Unknown	binned age only	Unnamed (study 23). host age=20-25 bands; very rich oral-hygiene, smoking, antibiotics metadata; sample type unlisted by Ruan
+PRJNA438728	CHAUDHARI20_IN	Y		RUAN2022	India	V3-V4	22.0	Mouthwash	not yet screened	Chaudhari 2020. Ruan 2022 study; 22 samples reported. Screen age at harvest. Small cohort (<30): pool with same-region studies for leave-one-cohort-out
+PRJNA484857	LIU19_CN	Y		RUAN2022	China	V3-V4	15.0	Unstimulated	not yet screened	Liu 2019. Ruan 2022 study; 15 samples reported. Screen age at harvest. Small cohort (<30): pool with same-region studies for leave-one-cohort-out
+PRJNA495719	JIANG19_CN	Y		RUAN2022	China	V3-V4	21.0	Unstimulated	not yet screened	Jiang 2019. Ruan 2022 study; 21 samples reported. Screen age at harvest. Small cohort (<30): pool with same-region studies for leave-one-cohort-out
+PRJNA503603	JI20_CN	Y		RUAN2022	China	V3-V4	24.0	Unstimulated	not yet screened	Ji 2020. Ruan 2022 study; 24 samples reported. Screen age at harvest. Small cohort (<30): pool with same-region studies for leave-one-cohort-out
+PRJNA515166	YEO19_MY	Y		RUAN2022	Malaysia	V3-V4	66.0	Unstimulated	not yet screened	Yeo 2019. Ruan 2022 study; 66 samples reported. Screen age at harvest
+PRJNA534340	ZHU20_CN_2	Y		RUAN2022	China	V3-V4	40.0	Stimulated and unstimulated	not yet screened	Zhu 2020b. Ruan 2022 study; 40 samples reported. Screen age at harvest
+PRJNA539937	URBANIAK20_US	N		RUAN2022	United States	V3-V4	13.0	Other	not yet screened	Urbaniak 2020. Sample type 'Other' - confirm it is whole saliva or rinse before include=Y
+PRJNA542018	YU20_CN	Y		RUAN2022	China	V4	10.0	Unstimulated	not yet screened	Yu 2020. Ruan 2022 study; 10 samples reported. Screen age at harvest. Small cohort (<30): pool with same-region studies for leave-one-cohort-out
+PRJNA556311	WANG20_CN	Y		RUAN2022	China	V3-V4	20.0	Unstimulated	not yet screened	Wang 2020. Ruan 2022 study; 20 samples reported. Screen age at harvest. Small cohort (<30): pool with same-region studies for leave-one-cohort-out
+PRJNA577839	ANDERSON20_EU	Y		RUAN2022	Europe	V3-V4	36.0	Stimulated	not yet screened	Anderson 2020. Ruan 2022 study; 36 samples reported. Screen age at harvest
+PRJNA578492	LIN20_CN	Y		RUAN2022	China	V3-V4	14.0	Unstimulated	not yet screened	Lin 2020. Ruan 2022 study; 14 samples reported. Screen age at harvest. Small cohort (<30): pool with same-region studies for leave-one-cohort-out
+PRJNA578951	TONG19_CN	Y		RUAN2022	China	V3-V4	23.0	Unstimulated	not yet screened	Tong 2019. Ruan 2022 study; 23 samples reported. Screen age at harvest. Small cohort (<30): pool with same-region studies for leave-one-cohort-out
+PRJNA586723	ZHU20_CN	Y		RUAN2022	China	V3-V4	60.0	Stimulated and unstimulated	not yet screened	Zhu 2020a. Ruan 2022 study; 60 samples reported. Screen age at harvest
+PRJNA586897	MENON19_CN	Y		RUAN2022	China	V3-V4	64.0	Unstimulated	not yet screened	Menon 2019. Ruan 2022 study; 64 samples reported. Screen age at harvest
+PRJNA587078	WANG19_CN	Y		RUAN2022	China	V3-V4	21.0	Unstimulated	not yet screened	Wang 2019. Ruan 2022 study; 21 samples reported. Screen age at harvest. Small cohort (<30): pool with same-region studies for leave-one-cohort-out
+PRJNA598080	ZIGANSHIN20_EU	Y		RUAN2022	Europe	V3-V4	12.0	Unstimulated	not yet screened	Ziganshina 2020. Ruan 2022 study; 12 samples reported. Screen age at harvest. Small cohort (<30): pool with same-region studies for leave-one-cohort-out
+PRJNA601054	SUN20_CN	Y		RUAN2022	China	V3-V4	27.0	Unstimulated	not yet screened	Sun 2020. Ruan 2022 study; 27 samples reported. Screen age at harvest. Small cohort (<30): pool with same-region studies for leave-one-cohort-out
+PRJNA602902	PUSHALKAR20_US	N		RUAN2022	United States	V3-V4	119.0	Stimulated	no age in repository	Pushalkar 2020. only collection date, geography and sample size deposited
+PRJNA609244	HIJAZI20_EU	Y		RUAN2022	Europe	V1-V2	13.0	Unstimulated	not yet screened	Hijazi 2020. Ruan 2022 study; 13 samples reported. Screen age at harvest. Small cohort (<30): pool with same-region studies for leave-one-cohort-out
+PRJNA623352	RELVAS21_EU	Y		RUAN2022	Europe	V3-V4	17.0	Unstimulated	not yet screened	Relvas 2021. Ruan 2022 study; 17 samples reported. Screen age at harvest. Small cohort (<30): pool with same-region studies for leave-one-cohort-out
+PRJNA634162	YANO20_US	N		RUAN2022	United States	V4	75.0	Other	no age in repository	Yano 2020. only visit/collection codes and sequencing fields deposited
+SRP113577	NIU20_CN	Y		RUAN2022	China	V4-V5	36.0	Unstimulated	not yet screened	Niu 2020. Ruan 2022 study; 36 samples reported. Screen age at harvest
+SRP125370	BHUSHAN19_IN	N		RUAN2022	India	V3-V4	6.0	Other	not yet screened	Bhushan 2019. Sample type 'Other' - confirm it is whole saliva or rinse before include=Y
+qiita:10823	VOGTMANN19_US	N		RUAN2022	United States	V4	138.0	Mouthwash	not yet screened	Vogtmann 2019. Qiita only, no INSDC accession in Ruan's table. Download via Qiita or find the SRA mirror
+PRJEB18476	WOLF17_EU	Y		RUAN2022,MICROAGE2025	Europe	V4	11.0	Stimulated	not yet screened	Wolf 2017. Ruan 2022 study; 11 samples reported. Screen age at harvest. Small cohort (<30): pool with same-region studies for leave-one-cohort-out Also listed by Saliva MicroAge.
+PRJNA587625	SOHAIL19_QA	Y		RUAN2022,MICROAGE2025	Qatar	V3-V4	73.0	Unstimulated	exact age deposited	Sohail 2019. host age=45 exact; BMI and ethnicity present; experimental factor=Case/Control, keep controls Also listed by Saliva MicroAge.
+PRJNA612815	SORIANO-L20_EU	N		RUAN2022,MICROAGE2025	Europe	V1-V3/V3-V4/V4-V5/V6-V8	22.0	Other	not yet screened	Soriano-Lerma 2020. Sample type 'Other' - confirm it is whole saliva or rinse before include=Y Also listed by Saliva MicroAge.
+PRJNA786805	MELB_AU	N		RUAN2022_VALIDATION	Australia	V4	26.0	Stimulated saliva	binned age only	Ruan's own validation cohort (wine experts). Bin-level check only
+PRJNA1336529	ZHOU_CN	N		VERIFIED,BENCHMARK	China	V3-V4	150.0	Saliva	ages only in paper supplement	Get ages from github.com/Z-yuxiang00/Oral_Microbiome-Age, then set include=Y
+PRJEB11419	AGP_ORAL	Y	447426.0	VERIFIED,HUANG2020	USA + others	V4	2755.0	Tongue swab	derived (birth_year + collection date)	American Gut / Qiita 10317. 1070 adults, incl. 232 shotgun. Not saliva - separate stratum

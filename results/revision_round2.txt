@@ -1,0 +1,96 @@
+evaluating preamble: lines 1-34 of reported_values.R
+[1/7] age, leave-one-cohort-out
+###########################################################
+# 0. METADATA DIAGNOSTICS                                 #
+###########################################################
+
+columns in sm:
+ [1] "run_accession" "group"         "cohort_id"     "region"       
+ [5] "route"         "bact_depth"    "class"         "label"        
+ [9] "age"           "sex"           "dis"           "depth"        
+
+searching every text column for 'tongue':
+  no column mentions 'tongue'
+
+sex column: sex 
+
+       female   male  other 
+   422   1694   1554      1 
+
+specimen route by cohort:
+route
+     merged      paired      single single_long 
+        307        2026        1254          84 
+
+cohorts per route:
+  merged             CHAUDHARI20_IN, CHINA_41273, NETHERLAN_46654, SUN20_CN, TIAN17_US
+  paired             CHINA_43872, CHINA_48248, HIJAZI20_EU, INDIA_36346, JAPAN_11746, JAPAN_17623, JAPAN_25734, KUMPITSCH20_EU, LINDHEIM16_EU, RELVAS21_EU, SLL2_ES, SOHAIL19_QA, SOUTHKORE_04331, SOUTHKORE_13236, SPAIN_83278, TAIWAN_39064, TRIAD_ES, USA_12320, USA_27304, USA_30897, WANG16_CN, WANG20_CN, WOLF17_EU, ZHU20_CN, ZHU20_CN_2
+  single             AGP_ORAL, ANTARCTIC_19274, CHAUDHARI20_IN, CHEN18_US, CHINA_48248, ISRAEL_38062, JAPAN_10651, JAPAN_10985, LEE17_CN, PORTUGAL_74247, SPAIN_74796, USA_29169, USA_39492, USA_48040, USA_74379, YU20_CN
+  single_long        JAPAN_10651, JAPAN_10985
+
+amplicon region by cohort count:
+region
+V1-V2 V1-V3 V3-V4    V4 
+  442   234  1952  1043 
+
+cohort sizes among training samples (largest first):
+co
+       TRIAD_ES         SLL2_ES        AGP_ORAL SOUTHKORE_13236    ISRAEL_38062 
+            470             445             441             309             181 
+      USA_39492     JAPAN_17623     JAPAN_25734 
+            143             140             139 
+
+###########################################################
+# 1. BASELINE - MUST REPRODUCE age_loco                   #
+###########################################################
+
+stored age_loco: MAE 12.003  null 14.444  r 0.470  R2 0.199  medWithinR 0.363
+
+baseline (all training samples)    n=3671  folds=18  MAE 12.003  null 14.444  r 0.469  R2  0.199  medWithinR 0.363
+
+###########################################################
+# 2. SEX AS A COVARIATE                                   #
+###########################################################
+
+samples with sex recorded: 3248 of 3671
+
+sex subset, without sex term       n=3248  folds=16  MAE 12.181  null 14.561  r 0.465  R2  0.184  medWithinR 0.386
+sex subset, with sex term          n=3248  folds=16  MAE 12.188  null 14.561  r 0.468  R2  0.184  medWithinR 0.388
+
+###########################################################
+# 3. COHORTS FROM ONE LABORATORY POOLED INTO ONE FOLD     #
+###########################################################
+
+pooled fold size: 234 samples
+
+UIC cohorts pooled                 n=3671  folds=17  MAE 12.045  null 14.450  r 0.467  R2  0.194  medWithinR 0.366
+
+###########################################################
+# 4. LARGEST COHORT EXCLUDED  (reproduces age_noAGP)      #
+###########################################################
+
+stored age_noAGP: MAE 11.805  null 14.792  r 0.520  R2 0.245  medWithinR 0.363
+
+AGP_ORAL excluded                  n=3230  folds=17  MAE 11.805  null 14.792  r 0.520  R2  0.245  medWithinR 0.363
+
+note: the largest training cohort is TRIAD_ES, not AGP_ORAL
+TRIAD_ES excluded                  n=3201  folds=17  MAE 12.680  null 14.793  r 0.410  R2  0.146  medWithinR 0.352
+
+###########################################################
+# 5. TONGUE-SWAB COHORT EXCLUDED                          #
+###########################################################
+
+no tongue-swab cohort identifiable from the metadata
+
+###########################################################
+# 6. PROVENANCE OF THE 0.219 FIGURE                       #
+###########################################################
+
+reviewer_checks pipeline: 3671 samples, 44 cohorts
+median within-cohort r over ALL 44 cohorts : 0.300
+median within-cohort r over the 18 eligible : 0.329
+
+-> if the first value is near 0.219 the manuscript figure came from
+   this pipeline across all cohorts, not from the main pipeline.
+
+done

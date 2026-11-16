@@ -1,0 +1,286 @@
+###########################################################
+# A. TRAINING-SET ACCOUNTING AND SIZE-MATCHED COMPARISON  #
+###########################################################
+
+full training set : 3671 samples, 44 cohorts
+matched set       : 2986 samples, 18 cohorts
+
+training size per fold:
+  primary LOCO  (trains on all training cohorts) : median 3561, range 3201-3631
+  matched LOCO  (trains on eligible cohorts only): median 2876, range 2516-2946
+  random  5-fold on matched set                  : 2389
+  random 18-fold on matched set                  : 2820
+
+per-fold detail (matched set):
+          cohort n_test n_train_matched n_train_primary
+        AGP_ORAL    441            2545            3230
+    ISRAEL_38062    181            2805            3490
+     JAPAN_10651     92            2894            3579
+     JAPAN_25734    139            2847            3532
+        LEE17_CN    127            2859            3544
+ NETHERLAN_46654     73            2913            3598
+         SLL2_ES    445            2541            3226
+ SOUTHKORE_13236    309            2677            3362
+     SPAIN_83278     50            2936            3621
+        SUN20_CN    130            2856            3541
+       TIAN17_US     62            2924            3609
+        TRIAD_ES    470            2516            3201
+       USA_12320     77            2909            3594
+       USA_39492    143            2843            3528
+       USA_48040     56            2930            3615
+       USA_74379     91            2895            3580
+       WANG20_CN     60            2926            3611
+         YU20_CN     40            2946            3631
+
+matched LOCO     MAE 12.080  r 0.450
+random  5-fold   MAE 11.035  r 0.569   gap +1.045
+random 18-fold   MAE 10.957  r 0.576   gap +1.123   <- size-matched
+
+paired cluster bootstrap over cohorts (2000 draws):
+  LOCO - random  5-fold : 1.04 [0.54, 1.59] 
+  LOCO - random 18-fold : 1.11 [0.60, 1.67] 
+
+###########################################################
+# B. LEAKAGE SENSITIVITY: FILTERS INSIDE TRAINING FOLDS   #
+###########################################################
+
+primary pipeline computes the 10% prevalence filter and the contaminant
+set on all samples; this refits both inside each training fold.
+
+genera retained per fold: median 114, range 106-122 (primary: 118)
+
+filter on all samples    MAE 12.080  r 0.450  medWithinR 0.315
+filter inside folds      MAE 12.152  r 0.440  medWithinR 0.301
+
+###########################################################
+# C. DISEASE AUC CONFIDENCE INTERVALS AND MATCHED COUNTS  #
+###########################################################
+
+OSCC KUMPITSCH20_EU          n= 92 cases= 72 ctrl= 20
+                             AUC 0.719 [0.587, 0.840]
+                             age-matched n=24  AUC 0.681  IQR [0.639, 0.722]  2.5-97.5% [0.507, 0.799]  (200/200 draws)
+
+OSCC LEE17_CN                n=252 cases=125 ctrl=127
+                             AUC 0.757 [0.700, 0.818]
+                             age-matched n=218  AUC 0.765  IQR [0.757, 0.772]  2.5-97.5% [0.746, 0.786]  (200/200 draws)
+
+OSCC TAIWAN_39064            n= 54 cases= 27 ctrl= 27
+                             AUC 0.860 [0.747, 0.951]
+                             age-matched n=40  AUC 0.885  IQR [0.873, 0.898]  2.5-97.5% [0.846, 0.947]  (200/200 draws)
+
+OSCC WOLF17_EU               n= 20 cases= 10 ctrl= 10
+                             AUC 0.870 [0.666, 1.000]
+                             age-matched n=10  AUC 0.760  IQR [0.720, 0.800]  2.5-97.5% [0.640, 0.881]  (200/200 draws)
+
+periodontitis PORTUGAL_74247 n= 58 cases= 36 ctrl= 22
+                             AUC 0.774 [0.639, 0.894]
+                             age-matched n=34  AUC 0.753  IQR [0.727, 0.779]  2.5-97.5% [0.685, 0.827]  (200/200 draws)
+
+periodontitis SPAIN_74796    n= 66 cases= 38 ctrl= 28
+                             AUC 0.790 [0.675, 0.893]
+                             age-matched n=52  AUC 0.796  IQR [0.779, 0.809]  2.5-97.5% [0.757, 0.839]  (200/200 draws)
+
+###########################################################
+# D. CONTAMINANT-RETAINED SENSITIVITY                     #
+###########################################################
+
+contaminant genera excluded (13): Variovorax, Acinetobacter, Stenotrophomonas, Pseudomonas, Ralstonia, Sphingomonas, Bradyrhizobium, Methylobacterium, Delftia, Comamonas, Burkholderia, Cutibacterium, Escherichia
+
+contaminants removed  (118 genera)  MAE 12.080  r 0.450
+contaminants retained (124 genera)  MAE 12.092  r 0.449
+
+###########################################################
+# E. ORAL-HEALTH GRADIENT: THRESHOLD AND SAMPLE PROVENANCE#
+###########################################################
+
+stored object fields: score, grade, healthy, local_ctrl, thr_published, thr_local 
+grade levels: grade 0 | grade 1 | grade 2 | grade 3 
+grade counts: grade 0=17  grade 1=23  grade 2=26  grade 3=11 
+
+RELVAS21_EU samples: 77
+class assignment within RELVAS21_EU:
+
+   train validate 
+      17       60 
+
+cross-tabulation of class against grade label:
+          grade
+class      grade 0 grade 1 grade 2 grade 3
+  train         17       0       0       0
+  validate       0      23      26      11
+
+-> if grade 0 falls entirely in 'train', those scores are IN-SAMPLE
+   fitted values while grades 1-3 are out-of-sample predictions.
+
+--- as currently reported (threshold from the same 17 controls) ---
+threshold 0.108
+  grade 0   flagged  11.8% (2/17)   <- CIRCULAR
+  grade 1   flagged  52.2% (12/23)
+  grade 2   flagged  76.9% (20/26)
+  grade 3   flagged  72.7% (8/11)
+
+--- leave-one-out threshold for grade 0 ---
+  grade 0   flagged  17.6% (3/17)
+
+--- clean refit: every RELVAS21_EU sample held out of training ---
+training n = 3654 (was 3671)
+correlation between stored and refit scores: r = 0.261
+
+all 77 scored out-of-sample; threshold 45.468
+  grade 0   flagged  11.8% (2/17)
+  grade 1   flagged  60.9% (14/23)
+  grade 2   flagged  50.0% (13/26)
+  grade 3   flagged  63.6% (7/11)
+  grade 0   flagged  11.8% under a leave-one-out threshold
+
+Spearman(score, grade): stored 0.482  clean refit 0.236
+AUC grade>=1 vs grade 0: stored 0.812  clean refit 0.692
+
+###########################################################
+# F. RECONCILING medWithinR 0.363 AND 0.219              #
+###########################################################
+
+primary LOCO  (trains on all 3671 training samples, tests on 2986)
+              MAE 12.003  r 0.469  median within-cohort r 0.363
+matched LOCO  (trains on the 2986 eligible samples only, tests on 2986)
+              MAE 12.080  r 0.450  median within-cohort r 0.315
+
+per-cohort within-cohort r, both arms:
+          cohort   n r_primary r_matched
+        AGP_ORAL 441     0.102     0.079
+    ISRAEL_38062 181     0.199     0.182
+     JAPAN_10651  92     0.178     0.196
+     JAPAN_25734 139     0.268     0.230
+        LEE17_CN 127     0.297     0.303
+ NETHERLAN_46654  73     0.361     0.323
+         SLL2_ES 445     0.421     0.454
+ SOUTHKORE_13236 309     0.392     0.343
+     SPAIN_83278  50     0.028     0.068
+        SUN20_CN 130     0.649     0.648
+       TIAN17_US  62     0.366     0.314
+        TRIAD_ES 470     0.513     0.516
+       USA_12320  77     0.214     0.232
+       USA_39492 143     0.581     0.538
+       USA_48040  56     0.390     0.376
+       USA_74379  91     0.134     0.108
+       WANG20_CN  60     0.377     0.316
+         YU20_CN  40     0.426     0.455
+
+###########################################################
+# G. HETEROGENEITY AND DIRECTIONAL AGREEMENT              #
+###########################################################
+
+-- genus: 13 features at q < 0.05 --
+                        feature    rho     lo     hi agree        q
+                Bifidobacterium  0.119  0.082  0.155 14/17 3.46e-08
+                    Haemophilus -0.157 -0.208 -0.105 17/18 2.83e-07
+                 Alloprevotella -0.158 -0.212 -0.103 16/18 9.94e-07
+                     Bergeyella -0.090 -0.131 -0.049 16/18 5.65e-04
+                       Sneathia -0.134 -0.196 -0.072 14/18 6.47e-04
+   Saccharibacteria_(TM7)_[G-6] -0.071 -0.107 -0.035 14/18 2.34e-03
+                  Desulfovibrio  0.085  0.038  0.132 11/15 6.55e-03
+                      Lautropia -0.129 -0.200 -0.057 13/18 6.57e-03
+          Veillonellaceae_[G-1]  0.088  0.032  0.143 13/17 2.66e-02
+ Absconditabacteria_(SR1)_[G-1] -0.109 -0.181 -0.037 14/18 3.14e-02
+                   Anaeroglobus  0.098  0.034  0.161 12/16 3.14e-02
+           Bacteroidaceae_[G-1]  0.086  0.025  0.146 12/18 4.80e-02
+                  Lactobacillus  0.080  0.024  0.137 12/18 4.80e-02
+
+-- pathway: 16 features at q < 0.05 --
+                                                    feature    rho     lo
+              superpathway of (R,R)-butanediol biosynthesis  0.143  0.088
+                                     glycogen degradation I -0.128 -0.178
+            superpathway of N-acetylneuraminate degradation -0.088 -0.124
+                superpathway of (Kdo)2-lipid A biosynthesis -0.138 -0.195
+         NAD salvage pathway III (to nicotinamide riboside) -0.111 -0.160
+                heme b biosynthesis II (oxygen-independent) -0.123 -0.177
+ superpathway of heme b biosynthesis from uroporphyrinogen- -0.124 -0.180
+                superpathway of 2,3-butanediol biosynthesis  0.083  0.045
+                                            tRNA processing -0.098 -0.150
+                            heme b biosynthesis V (aerobic) -0.120 -0.185
+                               D-erythronate degradation II -0.115 -0.179
+                                       UMP biosynthesis III  0.128  0.053
+                                         UMP biosynthesis I  0.125  0.051
+                   2-carboxy-1,4-naphthoquinol biosynthesis -0.096 -0.153
+                        superpathway of taurine degradation -0.101 -0.163
+                                        UMP biosynthesis II  0.117  0.044
+     hi agree        q
+  0.197 15/18 0.000141
+ -0.078 16/18 0.000141
+ -0.052 16/18 0.000272
+ -0.080 17/18 0.000391
+ -0.063 17/18 0.000736
+ -0.068 16/18 0.000966
+ -0.068 17/18 0.001010
+  0.120 14/18 0.001010
+ -0.047 17/18 0.009260
+ -0.053 15/18 0.019400
+ -0.050 15/18 0.021300
+  0.203 14/18 0.032600
+  0.198 14/18 0.032600
+ -0.037 15/18 0.042100
+ -0.039 13/18 0.043000
+  0.188 14/18 0.047100
+
+--- recomputed I-squared (method cross-check against stored rho) ---
+matrix used: G  (4426 x 297)
+
+max |difference| between stored and recomputed rho: 0.0510
+if that is near zero the method matches and I2 can be reported.
+
+                              feature rho_stored rho_recomputed   diff   I2
+                      Bifidobacterium      0.119          0.109 -0.010  0.0
+                          Haemophilus     -0.157         -0.135  0.022 41.2
+                       Alloprevotella     -0.158         -0.138  0.020 31.6
+                           Bergeyella     -0.090         -0.092 -0.002 20.8
+                             Sneathia     -0.134         -0.098  0.036 60.0
+         Saccharibacteria_(TM7)_[G-6]     -0.071         -0.058  0.013  0.3
+                        Desulfovibrio      0.085          0.104  0.019  0.0
+                            Lautropia     -0.129         -0.090  0.039 59.4
+                Veillonellaceae_[G-1]      0.088          0.096  0.008 45.2
+       Absconditabacteria_(SR1)_[G-1]     -0.109         -0.091  0.018 63.0
+                         Anaeroglobus      0.098          0.101  0.003 62.4
+                 Bacteroidaceae_[G-1]      0.086          0.074 -0.012 61.9
+                        Lactobacillus      0.080          0.077 -0.003 37.1
+                              Slackia      0.128          0.147  0.019 71.1
+         Saccharibacteria_(TM7)_[G-3]     -0.063         -0.015  0.048 39.5
+                     Pseudoramibacter      0.106          0.087 -0.019 65.0
+                             Kingella     -0.073         -0.050  0.023 37.7
+                       Shuttleworthia      0.077          0.072 -0.005 51.7
+                      Aggregatibacter     -0.103         -0.087  0.016 67.8
+                       Stomatobaculum      0.090          0.068 -0.022 61.8
+                          Actinomyces     -0.075         -0.061  0.014 55.6
+                               Rothia      0.074          0.046 -0.028 49.3
+      Peptostreptococcaceae_[XI][G-7]     -0.075         -0.086 -0.011 56.4
+                          Simonsiella     -0.072         -0.060  0.012 65.0
+ Lachnospiraceae_[XIV] (unclassified)     -0.085         -0.082  0.003 61.6
+   tau2  k agree        q
+ 0.0000 26 14/17 3.46e-08
+ 0.0072 34 17/18 2.83e-07
+ 0.0047 33 16/18 9.94e-07
+ 0.0027 34 16/18 5.65e-04
+ 0.0137 29 14/18 6.47e-04
+ 0.0000 33 14/18 2.34e-03
+ 0.0000 18 11/15 6.55e-03
+ 0.0151 34 13/18 6.57e-03
+ 0.0080 30 13/17 2.66e-02
+ 0.0176 34 14/18 3.14e-02
+ 0.0152 28 12/16 3.14e-02
+ 0.0153 27 12/18 4.80e-02
+ 0.0057 31 12/18 4.80e-02
+ 0.0197 21 10/13 5.11e-02
+ 0.0067 34 11/18 5.33e-02
+ 0.0161 21  9/15 6.41e-02
+ 0.0062 34 14/18 6.65e-02
+ 0.0103 31 13/18 6.85e-02
+ 0.0218 34 13/18 9.29e-02
+ 0.0163 33 13/18 9.29e-02
+ 0.0129 34 13/18 9.29e-02
+ 0.0100 34 12/18 9.29e-02
+ 0.0134 32 14/18 9.65e-02
+ 0.0145 21 12/16 1.10e-01
+ 0.0148 29 11/17 1.17e-01
+
+I2 across the 13 significant genera: median 41.2, range 0.0-63.0
+
+saved: results/revision_round1.rds

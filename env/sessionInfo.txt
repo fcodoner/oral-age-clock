@@ -1,0 +1,18 @@
+R version 4.5.2 (2025-10-31)
+Platform: x86_64-apple-darwin13.4.0
+Running under: macOS Mojave 10.14.6
+
+Matrix products: default
+BLAS/LAPACK: /Users/fcodoner/miniconda3/envs/oralage/lib/libopenblasp-r0.3.30.dylib;  LAPACK version 3.12.0
+
+locale:
+[1] es_ES.UTF-8/es_ES.UTF-8/es_ES.UTF-8/C/es_ES.UTF-8/es_ES.UTF-8
+
+time zone: Europe/Madrid
+tzcode source: system (macOS)
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+loaded via a namespace (and not attached):
+[1] compiler_4.5.2

@@ -1,0 +1,23 @@
+# raw and intermediate sequencing data are not deposited here;
+# they are available from ENA/SRA under the accessions in Supplementary Table S4
+raw/
+processed/
+final/
+final_split/
+picrust/
+*.fastq
+*.fastq.gz
+*.sra
+
+# local artefacts
+.DS_Store
+._*
+*.bak
+*.bak[0-9]
+*.orig
+*.tmp
+.Rhistory
+.RData
+.Rproj.user/
+release/
+

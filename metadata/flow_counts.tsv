@@ -1,0 +1,11 @@
+step	removed	remaining
+0. Input runs	0	24939
+1. No usable numeric age	5522	19417
+2. Outside adult age window	5211	14206
+3. Not an oral sample / type unknown	5802	8404
+4. Unsuitable library strategy	53	8351
+5. Too few reads	404	7947
+7. Antibiotics within 3 months	191	7756
+9. Diagnosed disease reported	288	7468
+10. Pregnancy reported	3	7465
+11. Duplicate runs / repeat participants	1307	6158

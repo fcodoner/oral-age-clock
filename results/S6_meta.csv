@@ -1,0 +1,30 @@
+"Type","Feature","Pooled Spearman rho","Direction","95% CI lower","95% CI upper","Cohorts contributing","Cohorts in pooled direction","q value (BH)"
+"Genus","Bifidobacterium","0.119","increases with age","0.082","0.155",17,14,3.46e-08
+"Genus","Haemophilus","-0.157","decreases with age","-0.208","-0.105",18,17,2.83e-07
+"Genus","Alloprevotella","-0.158","decreases with age","-0.212","-0.103",18,16,9.94e-07
+"Genus","Bergeyella","-0.090","decreases with age","-0.131","-0.049",18,16,0.000565
+"Genus","Sneathia","-0.134","decreases with age","-0.196","-0.072",18,14,0.000647
+"Genus","Saccharibacteria_(TM7)_[G-6]","-0.071","decreases with age","-0.107","-0.035",18,14,0.00234
+"Genus","Desulfovibrio","0.085","increases with age","0.038","0.132",15,11,0.00655
+"Genus","Lautropia","-0.129","decreases with age","-0.200","-0.057",18,13,0.00657
+"Genus","Veillonellaceae_[G-1]","0.088","increases with age","0.032","0.143",17,13,0.0266
+"Genus","Absconditabacteria_(SR1)_[G-1]","-0.109","decreases with age","-0.181","-0.037",18,14,0.0314
+"Genus","Anaeroglobus","0.098","increases with age","0.034","0.161",16,12,0.0314
+"Genus","Bacteroidaceae_[G-1]","0.086","increases with age","0.025","0.146",18,12,0.048
+"Genus","Lactobacillus","0.080","increases with age","0.024","0.137",18,12,0.048
+"Inferred pathway","superpathway of (R,R)-butanediol biosynthesis","0.143","increases with age","0.088","0.197",18,15,0.000141
+"Inferred pathway","glycogen degradation I","-0.128","decreases with age","-0.178","-0.078",18,16,0.000141
+"Inferred pathway","superpathway of N-acetylneuraminate degradation","-0.088","decreases with age","-0.124","-0.052",18,16,0.000272
+"Inferred pathway","superpathway of (Kdo)2-lipid A biosynthesis","-0.138","decreases with age","-0.195","-0.080",18,17,0.000391
+"Inferred pathway","NAD salvage pathway III (to nicotinamide riboside)","-0.111","decreases with age","-0.160","-0.063",18,17,0.000736
+"Inferred pathway","heme b biosynthesis II (oxygen-independent)","-0.123","decreases with age","-0.177","-0.068",18,16,0.000966
+"Inferred pathway","superpathway of heme b biosynthesis from uroporphyrinogen-III","-0.124","decreases with age","-0.180","-0.068",18,17,0.00101
+"Inferred pathway","superpathway of 2,3-butanediol biosynthesis","0.083","increases with age","0.045","0.120",18,14,0.00101
+"Inferred pathway","tRNA processing","-0.098","decreases with age","-0.150","-0.047",18,17,0.00926
+"Inferred pathway","heme b biosynthesis V (aerobic)","-0.120","decreases with age","-0.185","-0.053",18,15,0.0194
+"Inferred pathway","D-erythronate degradation II","-0.115","decreases with age","-0.179","-0.050",18,15,0.0213
+"Inferred pathway","UMP biosynthesis III","0.128","increases with age","0.053","0.203",18,14,0.0326
+"Inferred pathway","UMP biosynthesis I","0.125","increases with age","0.051","0.198",18,14,0.0326
+"Inferred pathway","2-carboxy-1,4-naphthoquinol biosynthesis","-0.096","decreases with age","-0.153","-0.037",18,15,0.0421
+"Inferred pathway","superpathway of taurine degradation","-0.101","decreases with age","-0.163","-0.039",18,13,0.043
+"Inferred pathway","UMP biosynthesis II","0.117","increases with age","0.044","0.188",18,14,0.0471

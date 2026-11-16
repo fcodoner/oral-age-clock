@@ -1,0 +1,52 @@
+cohort_id	n	age_min	age_median	age_max	pct_female	sample_types	platforms	strategies	countries
+AGP_ORAL	1070	18.0	49.0	89.0	38.4	swab:1070	Illumina HiSeq 2500; Illumina MiSeq; Illumina NovaSeq 6000	AMPLICON:798; WGS:232; OTHER:40	Argentina; Australia; Austria; Belgium
+ANTARCTIC_19274	39	24.0	32.0	55.0	0.0	saliva/rinse:39	Illumina HiSeq 2500	OTHER:36; WGS:3	
+CABRAL17_US	12	45.0	67.0	84.0	50.0	saliva/rinse:12	Illumina MiSeq	AMPLICON:12	USA
+CHAUDHARI20_IN	30	25.0	38.0	70.0	50.0	saliva/rinse:30	Illumina MiSeq	AMPLICON:30	India
+CHEN18_US	81	19.0	51.0	79.0	48.1	saliva/rinse:81	Illumina MiSeq	AMPLICON:81	
+CHINA_08123	58	23.0	24.0	24.0	100.0	saliva/rinse:58	Illumina MiSeq	AMPLICON:58	
+CHINA_41273	36	26.0	33.0	45.0	0.0	saliva/rinse:36	Illumina NovaSeq 6000	AMPLICON:36	
+CHINA_43872	37	18.0	35.0	67.0	73.0	saliva/rinse:37	Illumina HiSeq 2500	AMPLICON:37	
+CHINA_48248	30	18.0	26.5	37.0	70.0	saliva/rinse:30	Illumina HiSeq 2500	AMPLICON:30	
+CHINA_48473	40	45.0	53.0	63.0	60.0	saliva/rinse:40	Illumina MiSeq	AMPLICON:40	
+HIJAZI20_EU	43	32.0	51.0	65.0	65.1	saliva/rinse:43	Illumina MiSeq	AMPLICON:43	United Kingdom
+INDIA_36346	31	20.0	28.0	35.0	0.0	saliva/rinse:31	Illumina HiSeq 2500	OTHER:31	
+ISRAEL_38062	181	18.0	58.0	76.0	0.0	saliva/rinse:181	Illumina MiSeq	AMPLICON:181	Israel
+JAPAN_10651	92	21.0	37.0	68.0	0.0	saliva/rinse:92	454 GS FLX Titanium	AMPLICON:92	
+JAPAN_10985	21	27.0	45.0	57.0	0.0	saliva/rinse:21	454 GS FLX Titanium	AMPLICON:21	
+JAPAN_11746	5	28.0	31.0	37.0	40.0	saliva/rinse:5	Illumina MiSeq	AMPLICON:5	Japan
+JAPAN_17623	140	27.0	34.0	49.0	50.0	saliva/rinse:140	Illumina MiSeq	AMPLICON:140	Japan
+JAPAN_25734	139	34.0	66.0	89.0	38.8	saliva/rinse:139	Illumina MiSeq	AMPLICON:139	Japan
+KUMPITSCH20_EU	156	29.0	58.0	80.0	0.0	saliva/rinse:156	Illumina MiSeq	AMPLICON:156	Austria
+LEE17_CN	376	23.0	51.5	90.0	9.6	saliva/rinse:376	Illumina MiSeq	AMPLICON:376	Taiwan
+LINDHEIM16_EU	44	20.0	28.0	47.0	100.0	saliva/rinse:44	Illumina MiSeq	AMPLICON:44	
+MEXICO_96341	229	19.0	44.0	83.0	48.9	saliva/rinse:229	Illumina MiSeq	AMPLICON:229	
+NETHERLAN_46654	73	21.0	26.0	78.0	54.8	saliva/rinse:73	Illumina MiSeq	AMPLICON:73	
+PORTUGAL_74247	58	30.0	47.0	79.0	41.4	saliva/rinse:58	Illumina MiSeq	AMPLICON:58	Portugal; Spain
+RELVAS21_EU	77	30.0	42.0	65.0	0.0	saliva/rinse:77	Illumina MiSeq	AMPLICON:77	Portugal
+SLL2_ES	447	18.0	46.02	85.79	59.7	saliva/rinse:447	Illumina MiSeq	AMPLICON:447	Spain
+SOHAIL19_QA	68	21.0	35.0	50.0	0.0	saliva/rinse:68	Illumina HiSeq 1000	AMPLICON:68	
+SOUTHKORE_04331	32	28.0	52.0	76.0	0.0	saliva/rinse:32	Illumina MiSeq	AMPLICON:32	South Korea
+SOUTHKORE_13236	309	43.0	64.0	87.0	19.4	saliva/rinse:309	Illumina MiSeq	AMPLICON:309	South Korea
+SPAIN_74796	66	26.0	48.0	72.0	53.0	saliva/rinse:66	Illumina MiSeq	AMPLICON:66	Portugal; Spain
+SPAIN_83278	50	36.0	51.5	77.0	100.0	saliva/rinse:50	Illumina MiSeq	AMPLICON:50	Spain
+SPAIN_POR_74981	66	26.0	48.0	72.0	53.0	saliva/rinse:66	Illumina MiSeq	AMPLICON:66	Portugal; Spain
+SUN20_CN	130	18.0	53.0	81.0	60.0	saliva/rinse:130	Illumina HiSeq 2500	AMPLICON:130	
+TAIWAN_37501	73	21.0	54.0	77.0	0.0	saliva/rinse:73	Illumina MiSeq	AMPLICON:73	Taiwan
+TAIWAN_39064	75	21.0	50.0	77.0	0.0	saliva/rinse:75	Illumina MiSeq	AMPLICON:75	Taiwan
+TIAN17_US	62	18.0	31.0	72.0	75.8	saliva/rinse:62	Illumina MiSeq	AMPLICON:62	
+TONG19_CN	80	50.0	50.0	50.0	66.2	saliva/rinse:80	Illumina MiSeq	AMPLICON:80	
+TRIAD_ES	470	19.0	40.0	76.0	72.6	saliva/rinse:470	NextSeq 2000	AMPLICON:470	Spain
+USA_12320	78	20.2	53.9	79.1	35.9	saliva/rinse:78	Illumina MiSeq	AMPLICON:78	
+USA_27304	215	19.0	23.0	34.0	66.5	saliva/rinse:215	Illumina MiSeq	AMPLICON:215	USA
+USA_29169	18	22.0	31.835	70.0	44.4	saliva/rinse:18	Illumina MiSeq	WGS:9; AMPLICON:9	USA
+USA_30897	140	26.49	44.72	70.33	33.6	swab:94; saliva/rinse:46	Illumina MiSeq	AMPLICON:140	USA
+USA_39492	143	18.0	55.79	90.0	58.0	saliva/rinse:143	Illumina MiSeq	AMPLICON:143	USA
+USA_48040	56	24.0	48.0	70.0	71.4	saliva/rinse:56	Illumina MiSeq	AMPLICON:56	
+USA_74379	127	28.0	60.0	88.0	63.8	saliva/rinse:127	Illumina MiSeq	AMPLICON:127	USA
+WANG16_CN	55	22.0	45.0	62.0	69.1	saliva/rinse:55	Illumina MiSeq	AMPLICON:55	China
+WANG20_CN	60	21.0	41.5	62.0	66.7	saliva/rinse:60	Illumina HiSeq 2500	AMPLICON:60	
+WOLF17_EU	20	29.0	55.0	80.0	0.0	saliva/rinse:20	Illumina MiSeq	AMPLICON:20	Austria
+YU20_CN	40	20.0	43.0	71.0	57.5	saliva/rinse:40	Illumina HiSeq 2500	AMPLICON:40	
+ZHU20_CN	60	23.0	26.0	27.5	50.0	saliva/rinse:60	Illumina MiSeq	AMPLICON:60	
+ZHU20_CN_2	120	23.0	26.5	28.0	50.0	saliva/rinse:120	Illumina MiSeq	AMPLICON:120	

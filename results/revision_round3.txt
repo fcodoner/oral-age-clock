@@ -1,0 +1,104 @@
+evaluating preamble: lines 1-34
+[1/7] age, leave-one-cohort-out
+
+=== 1. RECOVERING THE CURATED SPECIMEN CLASSIFICATION ===
+
+columns in curated_samples.tsv:
+ [1] "cohort_id"                "bioproject"              
+ [3] "run_accession"            "sample_accession"        
+ [5] "sample_alias"             "subject_id"              
+ [7] "age_years"                "age_precision"           
+ [9] "age_bin"                  "age_source"              
+[11] "sex"                      "country"                 
+[13] "sample_material"          "bmi"                     
+[15] "smoking"                  "antibiotics"             
+[17] "health_status_raw"        "collection_date"         
+[19] "library_strategy"         "library_layout"          
+[21] "instrument_model"         "target_gene"             
+[23] "read_count"               "base_count"              
+[25] "fastq_ftp"                "fastq_md5"               
+[27] "filter_status"            "primary"                 
+[29] "x_subset_healthy"         "x_ibd"                   
+[31] "x_diabetes"               "x_cardiovascular_disease"
+[33] "x_body_site"              "sample_title"            
+[35] "all_attributes"           "age"                     
+[37] "reads"                    "y_cancer"                
+[39] "y_autoimmune"             "y_liver_disease"         
+[41] "y_kidney_disease"         "y_lung_disease"          
+[43] "y_pregnant"               "abx_months"              
+[45] "sample_type"              "is_wgs"                  
+[47] "participant"             
+
+joining on: run_accession 
+matched 4426 of 4426 samples in sm
+
+specimen type among training samples:
+st
+saliva/rinse         swab 
+        3230          441 
+
+specimen type by cohort (training samples):
+                 type
+cohort            saliva/rinse swab
+  AGP_ORAL                   0  441
+  ANTARCTIC_19274           35    0
+  CHAUDHARI20_IN            30    0
+  CHEN18_US                 18    0
+  CHINA_41273               36    0
+  CHINA_43872                9    0
+  CHINA_48248               30    0
+  HIJAZI20_EU               13    0
+  INDIA_36346               16    0
+  ISRAEL_38062             181    0
+  JAPAN_10651               92    0
+  JAPAN_10985               21    0
+  JAPAN_11746                5    0
+  JAPAN_17623              140    0
+  JAPAN_25734              139    0
+  KUMPITSCH20_EU            20    0
+  LEE17_CN                 127    0
+  LINDHEIM16_EU             44    0
+  NETHERLAN_46654           73    0
+  PORTUGAL_74247            22    0
+  RELVAS21_EU               17    0
+  SLL2_ES                  445    0
+  SOHAIL19_QA               32    0
+  SOUTHKORE_04331           32    0
+  SOUTHKORE_13236          309    0
+  SPAIN_74796               28    0
+  SPAIN_83278               50    0
+  SUN20_CN                 130    0
+  TAIWAN_39064              27    0
+  TIAN17_US                 62    0
+  TRIAD_ES                 470    0
+  USA_12320                 77    0
+  USA_27304                 25    0
+  USA_29169                  9    0
+  USA_30897                  8    0
+  USA_39492                143    0
+  USA_48040                 56    0
+  USA_74379                 91    0
+  WANG16_CN                 18    0
+  WANG20_CN                 60    0
+  WOLF17_EU                 10    0
+  YU20_CN                   40    0
+  ZHU20_CN                  20    0
+  ZHU20_CN_2                20    0
+
+cohorts with more than one specimen type: 0 of 44
+
+age by specimen type:
+  saliva/rinse   n=3230  mean age  46.6  sd  16.6  range 18-90
+  swab           n= 441  mean age  46.3  sd  14.9  range 18-81
+
+=== 2. STRATIFIED LEAVE-ONE-COHORT-OUT BY SPECIMEN TYPE ===
+
+primary analysis for reference: MAE 12.003  null 14.444  r 0.469  medWithinR 0.363
+
+saliva/rinse only                  n=3230  folds=17  MAE 11.805  null 14.792  r 0.520  medWithinR 0.363
+Error en cv.glmnet(X, y, family = fam, alpha = 0.5, foldid = FF(nrow(X)), : 
+  nfolds must be bigger than 3; nfolds=10 recommended
+Calls: sens -> loco -> fit -> cv.glmnet
+Además: Aviso:
+In max(foldid) : ningun argumento finito para max; retornando -Inf
+Ejecución interrumpida
