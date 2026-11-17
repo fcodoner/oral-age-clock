@@ -1,3 +1,14 @@
+# --------------------------------------------------------------------------
+# revision_round4.R
+# Oral microbiome age clock: cross-study validation of salivary 16S models
+#
+# Francisco M. Codoner
+# Instituto de Agroquimica y Tecnologia de Alimentos (IATA-CSIC), Valencia, Spain
+# ORCID 0000-0003-3671-8148
+#
+# Repository: https://github.com/fcodoner/oral-age-clock
+# Released under the MIT License; see LICENSE.
+# --------------------------------------------------------------------------
 # ---------------------------------------------------------------------------
 # revision_round4.R
 # Analyses requested by the second pre-submission review.

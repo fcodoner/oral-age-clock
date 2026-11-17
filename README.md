@@ -14,7 +14,7 @@ scripts/      analysis code
 features/     genus count and relative-abundance matrices, sample metadata
 results/      every object from which a reported value is taken
 figures/      the figures as submitted
-metadata/     curated per-sample and per-cohort tables; the two largest are gzipped and are read directly by read.delim() in R
+metadata/     curated per-sample and per-cohort tables
 env/          sessionInfo and external tool versions
 ```
 
