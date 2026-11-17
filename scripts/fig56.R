@@ -74,11 +74,20 @@ text(u[2], u[3]+diff(u[3:4])*0.06,
   adj=c(1.1,0), cex=0.82, col="grey20")
 
 par(mar=c(4.4,4.4,3.0,1.0))
+## Bootstrap the 17 local controls to put limits on each local flag rate.
+set.seed(3)
+bq <- replicate(2000, quantile(sample(GD$local_ctrl, length(GD$local_ctrl), replace=TRUE), 0.90))
+ci <- sapply(seq_along(lv), function(j) {
+        fr <- sapply(bq, function(th) 100*mean(GD$score[GD$grade == lv[j]] >= th))
+        quantile(fr, c(0.025, 0.975)) })
+yhi <- max(c(AN, ci))
 bp <- barplot(AN, beside=TRUE, border=NA, col=c("#9a9a9a","#b1483f"),
-  ylab="% flagged elevated", ylim=c(0, max(AN)*1.22), cex.axis=0.9, cex.names=0.92)
-for (j in 1:ncol(AN)) for (i in 1:2)
-  text(bp[i,j], AN[i,j]+max(AN)*0.035, sprintf("%.0f", AN[i,j]),
-       cex=0.76, col=c("grey35","#b1483f")[i])
+  ylab="% flagged elevated", ylim=c(0, yhi*1.18), cex.axis=0.9, cex.names=0.92)
+arrows(bp[2,], ci[1,], bp[2,], ci[2,], angle=90, code=3, length=0.035, lwd=1.3, col="#8d3830")
+for (j in 1:ncol(AN)) for (i in 1:2) {
+  yv <- if (i == 2) max(AN[i,j], ci[2,j]) else AN[i,j]
+  text(bp[i,j], yv + yhi*0.04, sprintf("%.0f", AN[i,j]),
+       cex=0.76, col=c("grey35","#b1483f")[i]) }
 mtext("b  Reference anchoring", side=3, line=1.2, adj=0, at=bp[1,1]-1.0, font=2, cex=1.04)
 legend("topleft", c("reference from training samples","controls from the same study"),
   fill=c("#9a9a9a","#b1483f"), border=NA, bty="n", cex=0.80)
@@ -88,7 +97,7 @@ g0  <- which(GD$grade == lv[1])
 loo <- 100*mean(sapply(g0, function(k) GD$score[k] >= quantile(GD$score[setdiff(g0, k)], 0.90)))
 segments(bp[2,1], AN[2,1], bp[2,1], loo, col="#b1483f", lwd=1.5, lty=3)
 points(bp[2,1], loo, pch=18, cex=1.6, col="#b1483f")
-text(bp[2,1], loo + max(AN)*0.045, sprintf("%.0f", loo), cex=0.74, col="#b1483f", font=3)
+text(bp[2,1], loo + yhi*0.045, sprintf("%.0f", loo), cex=0.74, col="#b1483f", font=3)
 legend("topright", legend="grade 0, leave-one-out threshold", pch=18, col="#b1483f",
   bty="n", cex=0.74, pt.cex=1.4)
 cat(sprintf("grade 0 flagged: %.1f%% in-sample, %.1f%% leave-one-out\n", AN[2,1], loo))

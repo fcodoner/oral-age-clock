@@ -1,0 +1,7 @@
+"condition","test_cohort","test_n","test_cases","test_controls","train_cohorts","train_cohort_names","train_n","train_cases","train_controls"
+"OSCC","KUMPITSCH20_EU",92,72,20,3,"LEE17_CN; TAIWAN_39064; WOLF17_EU",326,162,164
+"OSCC","LEE17_CN",252,125,127,3,"KUMPITSCH20_EU; TAIWAN_39064; WOLF17_EU",166,109,57
+"OSCC","TAIWAN_39064",54,27,27,3,"KUMPITSCH20_EU; LEE17_CN; WOLF17_EU",364,207,157
+"OSCC","WOLF17_EU",20,10,10,3,"KUMPITSCH20_EU; LEE17_CN; TAIWAN_39064",398,224,174
+"periodontitis","PORTUGAL_74247",58,36,22,1,"SPAIN_74796",66,38,28
+"periodontitis","SPAIN_74796",66,38,28,1,"PORTUGAL_74247",58,36,22

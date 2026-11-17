@@ -1,0 +1,136 @@
+[1/7] age, leave-one-cohort-out
+##### A. PER-COHORT AGE-MODEL PERFORMANCE (new Supplementary Table) #####
+
+          cohort   n age_min age_max age_median null_MAE    MAE     r
+        AGP_ORAL 441    18.0   81.00      46.00   12.920 13.146 0.102
+    ISRAEL_38062 181    18.0   76.00      58.00   13.903 11.827 0.199
+     JAPAN_10651  92    21.0   68.00      37.00   13.812  9.301 0.178
+     JAPAN_25734 139    34.0   89.00      66.00   17.410 15.618 0.268
+        LEE17_CN 127    24.0   90.00      51.00   11.849 10.992 0.297
+ NETHERLAN_46654  73    21.0   78.00      26.00   22.288 17.344 0.361
+         SLL2_ES 445    18.0   85.79      46.02   13.295 11.729 0.421
+ SOUTHKORE_13236 309    43.0   87.00      64.00   18.566 13.487 0.392
+     SPAIN_83278  50    36.0   77.00      51.50    7.437  8.398 0.028
+        SUN20_CN 130    18.0   81.00      53.00   14.070 11.701 0.649
+       TIAN17_US  62    18.0   72.00      31.00   17.114 12.809 0.366
+        TRIAD_ES 470    19.0   76.00      40.00   13.336  8.945 0.513
+       USA_12320  77    20.2   79.10      53.00   14.835 14.363 0.214
+       USA_39492 143    18.0   90.00      55.79   15.110 11.914 0.581
+       USA_48040  56    24.0   70.00      48.00   16.036 13.969 0.390
+       USA_74379  91    28.0   88.00      59.33   15.496 14.174 0.134
+       WANG20_CN  60    21.0   62.00      41.50   10.508  8.784 0.377
+         YU20_CN  40    20.0   71.00      43.00   14.457 11.943 0.426
+ improvement_pct
+            -1.7
+            14.9
+            32.7
+            10.3
+             7.2
+            22.2
+            11.8
+            27.4
+           -12.9
+            16.8
+            25.2
+            32.9
+             3.2
+            21.2
+            12.9
+             8.5
+            16.4
+            17.4
+
+sample-weighted  MAE 12.003  r 0.469
+cohort-weighted  MAE 12.247  (mean of per-cohort MAE)
+median within-cohort r 0.363   mean 0.328
+age range of eligible cohorts: 18 to 90 years; excluded cohorts span <40 y
+
+##### B. WITHIN-LABORATORY vs CROSS-COHORT AT MATCHED TRAINING SIZE #####
+
+isolates laboratory from training-set size: the cross-cohort model is
+retrained on a random subset of OTHER cohorts of the same size.
+
+AGP_ORAL         n=441  train=353 | within-lab MAE 11.912 r 0.283 | cross-cohort same size MAE 13.146 r 0.060
+SLL2_ES          n=445  train=356 | within-lab MAE 10.515 r 0.553 | cross-cohort same size MAE 12.188 r 0.386
+SOUTHKORE_13236  n=309  train=247 | within-lab MAE  6.880 r 0.584 | cross-cohort same size MAE 18.631 r 0.221
+TRIAD_ES         n=470  train=376 | within-lab MAE  8.189 r 0.596 | cross-cohort same size MAE  9.537 r 0.427
+
+##### C. DISPERSION ACROSS COHORTS (PERMANOVA assumption) #####
+
+samples 4426, genera 124; computing Bray-Curtis...
+
+Permutation test for homogeneity of multivariate dispersions
+Permutation: free
+Number of permutations: 199
+
+Response: Distances
+            Df Sum Sq Mean Sq      F N.Perm Pr(>F)   
+Groups      44 30.743 0.69871 57.687    199  0.005 **
+Residuals 4381 53.064 0.01211                        
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+mean distance-to-centroid range across cohorts: 0.190 to 0.569
+
+##### D. DISEASE FOLDS: TRAINING COMPOSITION AND COUNTS #####
+
+     condition    test_cohort test_n test_cases test_controls train_cohorts
+          OSCC KUMPITSCH20_EU     92         72            20             3
+          OSCC       LEE17_CN    252        125           127             3
+          OSCC   TAIWAN_39064     54         27            27             3
+          OSCC      WOLF17_EU     20         10            10             3
+ periodontitis PORTUGAL_74247     58         36            22             1
+ periodontitis    SPAIN_74796     66         38            28             1
+                      train_cohort_names train_n train_cases train_controls
+       LEE17_CN; TAIWAN_39064; WOLF17_EU     326         162            164
+ KUMPITSCH20_EU; TAIWAN_39064; WOLF17_EU     166         109             57
+     KUMPITSCH20_EU; LEE17_CN; WOLF17_EU     364         207            157
+  KUMPITSCH20_EU; LEE17_CN; TAIWAN_39064     398         224            174
+                             SPAIN_74796      66          38             28
+                          PORTUGAL_74247      58          36             22
+
+##### E. DISEASE MODELS WITH FILTERS REFIT INSIDE TRAINING FOLDS #####
+
+OSCC KUMPITSCH20_EU          global filter AUC 0.719 | fold-internal (132 genera) AUC 0.739 | diff +0.020
+OSCC LEE17_CN                global filter AUC 0.757 | fold-internal (126 genera) AUC 0.742 | diff -0.015
+OSCC TAIWAN_39064            global filter AUC 0.860 | fold-internal (131 genera) AUC 0.856 | diff -0.004
+OSCC WOLF17_EU               global filter AUC 0.870 | fold-internal (131 genera) AUC 0.880 | diff +0.010
+periodontitis PORTUGAL_74247 global filter AUC 0.774 | fold-internal (116 genera) AUC 0.795 | diff +0.021
+periodontitis SPAIN_74796    global filter AUC 0.790 | fold-internal (120 genera) AUC 0.813 | diff +0.023
+
+##### F. MATCHING AND RAREFACTION DIAGNOSTICS #####
+
+OSCC KUMPITSCH20_EU          unmatched age diff  13.3 y | matched n= 24  age diff +0.7 y  AUC 0.674 [0.632, 0.722]
+                             rarefied: 77 of 92 samples retained at depth >= 10,000
+OSCC LEE17_CN                unmatched age diff   1.0 y | matched n=218  age diff +0.4 y  AUC 0.764 [0.757, 0.771]
+                             rarefied: 373 of 376 samples retained at depth >= 10,000
+OSCC TAIWAN_39064            unmatched age diff   7.0 y | matched n= 42  age diff +0.7 y  AUC 0.882 [0.870, 0.898]
+                             rarefied: 75 of 75 samples retained at depth >= 10,000
+OSCC WOLF17_EU               unmatched age diff  14.4 y | matched n= 10  age diff -0.8 y  AUC 0.800 [0.720, 0.840]
+                             rarefied: 20 of 20 samples retained at depth >= 10,000
+periodontitis PORTUGAL_74247 unmatched age diff  10.6 y | matched n= 34  age diff +2.0 y  AUC 0.744 [0.723, 0.765]
+                             rarefied: 58 of 58 samples retained at depth >= 10,000
+periodontitis SPAIN_74796    unmatched age diff   4.5 y | matched n= 52  age diff +0.5 y  AUC 0.799 [0.783, 0.814]
+                             rarefied: 66 of 66 samples retained at depth >= 10,000
+
+##### G. GRADIENT REFERENCE: PROVENANCE AND IN-SAMPLE FRACTION #####
+
+periodontitis classifier trained on 124 samples from 2 cohorts (74 cases, 50 controls)
+reference distribution: 3671 samples (all training-set samples), scored by that classifier
+of these, 50 (1.4%) were in the classifier's own training set
+90th percentile of reference: all 3.283 | excluding in-sample 3.304
+  grade 0   flagged   0.0% (all ref) |   0.0% (in-sample excluded)
+  grade 1   flagged   4.3% (all ref) |   4.3% (in-sample excluded)
+  grade 2   flagged  11.5% (all ref) |  11.5% (in-sample excluded)
+  grade 3   flagged  18.2% (all ref) |  18.2% (in-sample excluded)
+
+threshold and flag-rate uncertainty, 2000 bootstrap draws of the 17 local controls:
+  local threshold 0.108 [-0.345, 1.713]
+  grade 0   flagged  11.8% [  5.9,  35.3]
+  grade 1   flagged  52.2% [ 13.0,  65.2]
+  grade 2   flagged  76.9% [ 34.6,  80.8]
+  grade 3   flagged  72.7% [ 36.4,  81.8]
+
+clinical grade counts: grade 0 n=17  grade 1 n=23  grade 2 n=26  grade 3 n=11
+
+done
